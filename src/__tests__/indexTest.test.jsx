@@ -11,7 +11,7 @@ const sampleProducts = [
 
 test('renders product dashboard title', () => {
   render(<App />)
-  expect(screen.getByText(/Product Dashboard/i)).toBeInTheDocument()
+  expect(screen.getByText(/Product Store/i)).toBeInTheDocument()
 })
 
 test('displays all products initially', () => {
