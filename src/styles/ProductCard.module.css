@@ -1,3 +1,43 @@
-/* TODO: Style the product card container */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff;
+}
 
-/* TODO: Add special styling for out-of-stock products */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.outOfStock {
+  background-color: #fafafa;
+  border-left: 6px solid #d32f2f;
+  opacity: 0.85;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.stock {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.inStock {
+  color: #2e7d32;
+}
+
+.outStockText {
+  color: #d32f2f;
+}

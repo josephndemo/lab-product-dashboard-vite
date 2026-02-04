@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ProductList from "./components/ProductList";
+import { Button, Container, Stack, Typography } from "@mui/material";
 
 function App() {
   const initialProducts = [
@@ -9,16 +10,43 @@ function App() {
   ];
 
   const [products, setProducts] = useState(initialProducts);
+  const [showInStockOnly, setShowInStockOnly] = useState(false);
 
   const removeProduct = (id) => {
-    setProducts(products.filter((p) => p.id !== id));
+    setProducts((prev) => prev.filter((p) => p.id !== id));
   };
 
+  const filteredProducts = showInStockOnly
+    ? products.filter((p) => p.inStock)
+    : products;
+
   return (
-    <>
-      <h1>Product Store</h1>
-      <ProductList products={products} onRemove={removeProduct} />
-    </>
+    <Container maxWidth="sm" sx={{ mt: 6 }}>
+      <Typography variant="h4" fontWeight={600} gutterBottom>
+        Product Dashboard
+      </Typography>
+
+      <Typography variant="body2" color="text.secondary" mb={3}>
+        Manage inventory and availability
+      </Typography>
+
+      <Stack direction="row" spacing={2} mb={3}>
+        <Button
+          variant="contained"
+          onClick={() => setShowInStockOnly(!showInStockOnly)}
+        >
+          {showInStockOnly ? "Show All Products" : "Show In-Stock Only"}
+        </Button>
+      </Stack>
+
+      {filteredProducts.length === 0 ? (
+        <Typography color="error" data-testid="no-products">
+          No products in stock
+        </Typography>
+      ) : (
+        <ProductList products={filteredProducts} onRemove={removeProduct} />
+      )}
+    </Container>
   );
 }
 
