@@ -11,9 +11,8 @@
 }
 
 .outOfStock {
-  background-color: #fafafa;
-  border-left: 6px solid #d32f2f;
-  opacity: 0.85;
+  opacity: 0.6;
+  background-color: #ffe6e6;
 }
 
 .title {
