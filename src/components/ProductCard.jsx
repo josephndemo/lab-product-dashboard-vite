@@ -1,14 +1,11 @@
-import { Button, Card, CardContent, Stack, Typography } from "@mui/material";
-import styles from "../styles/ProductCard.module.css"; // optional CSS module
+import React from "react";
+import { Card, CardContent, Typography, Stack, Button } from "@mui/material";
+import styles from "../styles/ProductCard.module.css";
 
-/**
- * Displays individual product information
- * NOTE: outOfStockClass is required for test assertions
- */
 function ProductCard({ product, onRemove }) {
   return (
     <Card
-      className={`outOfStockClass ${!product.inStock ? styles.outOfStock : ""}`}
+      className={product.inStock ? "" : styles.outOfStockClass}
       sx={{ mb: 2 }}
       data-testid="product-card"
     >

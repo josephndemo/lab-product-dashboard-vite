@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Button, Container, Stack, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Container, Stack, Typography, Button } from "@mui/material";
 import ProductList from "./components/ProductList";
 
 // Initial product data
@@ -13,23 +13,21 @@ function App() {
   const [products, setProducts] = useState(initialProducts);
   const [showInStockOnly, setShowInStockOnly] = useState(false);
 
-  // Remove a product by ID
+  // Remove product by id
   const removeProduct = (id) => {
     setProducts((prev) => prev.filter((product) => product.id !== id));
   };
 
-  // Filter products based on stock status
+  // Filter products
   const filteredProducts = showInStockOnly
     ? products.filter((product) => product.inStock)
     : products;
 
   return (
     <Container maxWidth="sm" sx={{ mt: 6 }}>
-      {/* MUST match test expectation */}
       <Typography variant="h4" fontWeight={600} gutterBottom>
         Product Store
       </Typography>
-
       <Typography variant="body2" color="text.secondary" mb={3}>
         Manage inventory and availability
       </Typography>
@@ -43,7 +41,6 @@ function App() {
         </Button>
       </Stack>
 
-      {/* Conditional rendering */}
       {filteredProducts.length === 0 ? (
         <Typography color="error" data-testid="no-products">
           No products in stock
