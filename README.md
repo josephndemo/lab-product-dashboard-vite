@@ -118,3 +118,24 @@ And it's gone!
 - [append()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append)
 - [removeChild()](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
 - [element.remove()](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove)
+# Product Dashboard
+
+A React + Material UI product dashboard that allows users to:
+- View products dynamically
+- Filter in-stock items
+- Remove products from inventory
+
+## Tech Stack
+- React
+- Material UI
+- Jest & React Testing Library
+
+## Setup
+npm install
+npm run dev
+npm test
+
+## Features
+- Conditional rendering
+- Component-based architecture
+- Tested UI behavior

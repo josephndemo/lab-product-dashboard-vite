@@ -1,6 +1,9 @@
 import ProductCard from "./ProductCard";
 
-function ProductList({ products, onRemove }) {
+/**
+ * Renders a list of products using ProductCard components
+ */
+function ProductList({ products, onRemove, onToggleStock }) {
   return (
     <>
       {products.map((product) => (
@@ -8,6 +11,7 @@ function ProductList({ products, onRemove }) {
           key={product.id}
           product={product}
           onRemove={onRemove}
+          onToggleStock={onToggleStock}
         />
       ))}
     </>

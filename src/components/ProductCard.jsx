@@ -1,7 +1,10 @@
+import { Button, Card, CardContent, Stack, Typography } from "@mui/material";
 import styles from "../styles/ProductCard.module.css";
-import { Button, Card, CardContent, Stack } from "@mui/material";
 
-function ProductCard({ product, onRemove }) {
+/**
+ * Displays individual product details
+ */
+function ProductCard({ product, onRemove, onToggleStock }) {
   return (
     <Card
       className={`${styles.card} ${
@@ -11,21 +14,30 @@ function ProductCard({ product, onRemove }) {
       data-testid="product-card"
     >
       <CardContent>
-        <h3 className={styles.title}>{product.name}</h3>
+        <Typography variant="h6" fontWeight={600}>
+          {product.name}
+        </Typography>
 
-        <p className={styles.price}>
+        <Typography variant="body2">
           Price: <strong>${product.price}</strong>
-        </p>
+        </Typography>
 
-        <p
-          className={`${styles.stock} ${
-            product.inStock ? styles.inStock : styles.outStockText
-          }`}
+        <Typography
+          variant="body2"
+          color={product.inStock ? "success.main" : "error.main"}
         >
           {product.inStock ? "In Stock" : "Out of Stock"}
-        </p>
+        </Typography>
 
-        <Stack direction="row" justifyContent="flex-end">
+        <Stack direction="row" justifyContent="flex-end" spacing={1} mt={2}>
+          <Button
+            size="small"
+            variant="outlined"
+            onClick={() => onToggleStock(product.id)}
+          >
+            Toggle Stock
+          </Button>
+
           <Button
             size="small"
             variant="outlined"
