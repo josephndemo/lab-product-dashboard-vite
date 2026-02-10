@@ -5,13 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   test: {
-    globals: true,               // allows using expect, test, etc. globally
-    environment: 'happy-dom',    // DOM environment for React testing
-    setupFiles: [],              // optional, for global test setup
-    reporters: ['default', 'junit'], // default console + JUnit XML
-    outputFile: './junit.xml',       // JUnit XML output file
-    coverage: {
-      reporter: ['text', 'lcov'],
-    },
+    globals: true,            // optional, allows test(), expect() without import
+    environment: 'jsdom',     // use jsdom instead of happy-dom
+    reporters: ['default', 'junit'], 
+    outputFile: './junit.xml',
   },
 })
