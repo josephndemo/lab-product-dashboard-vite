@@ -1,17 +1,17 @@
-/// <reference types="vitest" />
-import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
+/// vitest.config.js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
   test: {
-    globals: true,               // allows using `describe`, `it`, `expect` without imports
-    environment: 'happy-dom',    // lightweight DOM environment
-    setupFiles: './src/setupTests.js', // optional, for setup like React Testing Library
-    css: true,                   // process CSS modules if you use them
+    globals: true,               // allows using expect, test, etc. globally
+    environment: 'happy-dom',    // DOM environment for React testing
+    setupFiles: [],              // optional, for global test setup
+    reporters: ['default', 'junit'], // default console + JUnit XML
+    outputFile: './junit.xml',       // JUnit XML output file
     coverage: {
-      provider: 'c8',            // coverage provider
-      reporter: ['text', 'lcov'],// coverage reports
+      reporter: ['text', 'lcov'],
     },
   },
-});
+})
