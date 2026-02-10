@@ -7,11 +7,9 @@ import styles from "../styles/ProductCard.module.css";
 
 export default function ProductCard({ product, onRemove }) {
   return (
-    <Card
-      className={!product.inStock ? styles.outOfStockClass : ""}
-      sx={{ marginBottom: 2 }}
-    >
-      <CardContent>
+    <Card sx={{ marginBottom: 2 }}>
+      {/* Apply class to CardContent so closest('div') finds it in the test */}
+      <CardContent className={!product.inStock ? styles.outOfStockClass : ""}>
         <Typography variant="h6">{product.name}</Typography>
         <Typography color="text.secondary">{product.price}</Typography>
         <Typography variant="body2">

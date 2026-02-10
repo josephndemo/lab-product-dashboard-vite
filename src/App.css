@@ -107,22 +107,3 @@ button:active {
   color: #6b7280;
   margin-top: 40px;
 }
-✅ 3. Make Sure Your Components Match the CSS
-ProductList.jsx
-function ProductList({ products, onRemove }) {
-  if (products.length === 0) {
-    return <p className="empty-message">No products in stock.</p>;
-  }
-
-  return (
-    <div className="product-list">
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          {...product}
-          onRemove={onRemove}
-        />
-      ))}
-    </div>
-  );
-}
