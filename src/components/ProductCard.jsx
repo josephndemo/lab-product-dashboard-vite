@@ -3,13 +3,12 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import styles from "../styles/ProductCard.module.css";
+import "../styles/ProductCard.css"; // import regular CSS, not module
 
 export default function ProductCard({ product, onRemove }) {
   return (
     <Card sx={{ marginBottom: 2 }}>
-      {/* Apply class to CardContent so closest('div') finds it in the test */}
-      <CardContent className={!product.inStock ? styles.outOfStockClass : ""}>
+      <CardContent className={!product.inStock ? "outOfStockClass" : ""}>
         <Typography variant="h6">{product.name}</Typography>
         <Typography color="text.secondary">{product.price}</Typography>
         <Typography variant="body2">

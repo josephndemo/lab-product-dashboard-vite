@@ -2,7 +2,6 @@ import React from 'react'
 import '@testing-library/jest-dom'
 import { render, screen, fireEvent } from '@testing-library/react'
 import App from '../App'
-import '@testing-library/jest-dom'
 
 const sampleProducts = [
   { id: 1, name: 'Laptop', price: '$999', inStock: true },
@@ -25,7 +24,7 @@ test('displays all products initially', () => {
 
 test('applies conditional styling for out-of-stock products', () => {
   render(<App />)
-  const outOfStockProduct = screen.getByText(/Phone/i) // Make sure "Phone" exists in sampleProducts
+  const outOfStockProduct = screen.getByText(/Phone/i)
   expect(outOfStockProduct.closest('div')).toHaveClass('outOfStockClass')
 })
 
@@ -33,10 +32,10 @@ test('removes product from the dashboard when "Remove" button is clicked', () =>
   render(<App />)
   const removeButtons = screen.queryAllByText(/Remove/i)
 
-  expect(removeButtons.length).toBeGreaterThan(0) // Ensure buttons exist
+  expect(removeButtons.length).toBeGreaterThan(0)
 
   if (removeButtons.length > 0) {
     fireEvent.click(removeButtons[0])
-    expect(removeButtons[0]).not.toBeInTheDocument() // Expect removal to work
+    expect(removeButtons[0]).not.toBeInTheDocument()
   }
 })
