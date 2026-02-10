@@ -8,12 +8,12 @@ import styles from "../styles/ProductCard.module.css";
 export default function ProductCard({ product, onRemove }) {
   return (
     <Card
-      className={product.inStock ? "" : styles.outOfStockClass} // <-- apply class here
+      className={!product.inStock ? styles.outOfStockClass : ""}
       sx={{ marginBottom: 2 }}
     >
       <CardContent>
         <Typography variant="h6">{product.name}</Typography>
-        <Typography color="text.secondary">${product.price}</Typography>
+        <Typography color="text.secondary">{product.price}</Typography>
         <Typography variant="body2">
           {product.inStock ? "In Stock" : "Out of Stock"}
         </Typography>
@@ -21,7 +21,7 @@ export default function ProductCard({ product, onRemove }) {
           variant="contained"
           color="secondary"
           onClick={() => onRemove(product.id)}
-          sx={{ marginTop: 1 }}
+          sx={{ mt: 1 }}
         >
           Remove
         </Button>
