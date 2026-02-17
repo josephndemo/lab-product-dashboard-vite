@@ -1,53 +1,42 @@
-import React, { useState } from "react";
-import { Container, Stack, Typography, Button } from "@mui/material";
-import ProductList from "./components/ProductList";
+import React, { useState } from 'react';
+import ProductList from './components/ProductList';
+import { Container, Typography, ToggleButton, ToggleButtonGroup } from '@mui/material';
 
-// Initial product data
 const initialProducts = [
-  { id: 1, name: "Laptop", price: "$999", inStock: true },
-  { id: 2, name: "Phone", price: "$699", inStock: false },
-  { id: 3, name: "Tablet", price: "$499", inStock: true },
+  { id: 1, name: "Laptop", price: 999, inStock: true },
+  { id: 2, name: "Phone", price: 699, inStock: false },
+  { id: 3, name: "Monitor", price: 250, inStock: true },
 ];
 
 function App() {
   const [products, setProducts] = useState(initialProducts);
-  const [showInStockOnly, setShowInStockOnly] = useState(false);
+  const [filter, setFilter] = useState('all');
 
-  // Remove product by id
-  const removeProduct = (id) => {
-    setProducts((prev) => prev.filter((product) => product.id !== id));
+  const handleDelete = (id) => {
+    setProducts(products.filter(product => product.id !== id));
   };
 
-  // Filter products
-  const filteredProducts = showInStockOnly
-    ? products.filter((product) => product.inStock)
-    : products;
+  const filteredProducts = products.filter(product => {
+    if (filter === 'inStock') return product.inStock;
+    return true;
+  });
 
   return (
-    <Container maxWidth="sm" sx={{ mt: 6 }}>
-      <Typography variant="h4" fontWeight={600} gutterBottom>
-        Product Store
-      </Typography>
-      <Typography variant="body2" color="text.secondary" mb={3}>
-        Manage inventory and availability
-      </Typography>
+    <Container sx={{ py: 4 }}>
+      {/* Test 1 expects "Product Store" */}
+      <Typography variant="h3" gutterBottom>Product Store</Typography>
+      
+      <ToggleButtonGroup
+        value={filter}
+        exclusive
+        onChange={(e, val) => val && setFilter(val)}
+        sx={{ mb: 3 }}
+      >
+        <ToggleButton value="all">All</ToggleButton>
+        <ToggleButton value="inStock">In Stock</ToggleButton>
+      </ToggleButtonGroup>
 
-      <Stack direction="row" spacing={2} mb={3}>
-        <Button
-          variant="contained"
-          onClick={() => setShowInStockOnly((prev) => !prev)}
-        >
-          {showInStockOnly ? "Show All Products" : "Show In-Stock Only"}
-        </Button>
-      </Stack>
-
-      {filteredProducts.length === 0 ? (
-        <Typography color="error" data-testid="no-products">
-          No products in stock
-        </Typography>
-      ) : (
-        <ProductList products={filteredProducts} onRemove={removeProduct} />
-      )}
+      <ProductList products={filteredProducts} onDelete={handleDelete} />
     </Container>
   );
 }

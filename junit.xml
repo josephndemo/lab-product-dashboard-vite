@@ -1,13 +1,368 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="4" failures="0" errors="0" time="0.05286525">
-    <testsuite name="src/__tests__/indexTest.test.jsx" timestamp="2026-02-10T18:44:36.924Z" hostname="NidaPC.local" tests="4" failures="0" errors="0" skipped="0" time="0.05286525">
-        <testcase classname="src/__tests__/indexTest.test.jsx" name="renders product dashboard title" time="0.0405125">
+<testsuites name="vitest tests" tests="4" failures="2" errors="0" time="0.072122708">
+    <testsuite name="src/__tests__/indexTest.test.jsx" timestamp="2026-02-17T16:10:36.256Z" hostname="NidaPC.local" tests="4" failures="2" errors="0" skipped="0" time="0.072122708">
+        <testcase classname="src/__tests__/indexTest.test.jsx" name="renders product dashboard title" time="0.051551375">
         </testcase>
-        <testcase classname="src/__tests__/indexTest.test.jsx" name="displays all products initially" time="0.003668083">
+        <testcase classname="src/__tests__/indexTest.test.jsx" name="displays all products initially" time="0.006575541">
+            <failure message="Unable to find an element with the text: Tablet. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div[39m
+      [33mclass[39m=[32m&quot;MuiContainer-root MuiContainer-maxWidthLg css-xsov46-MuiContainer-root&quot;[39m
+    [36m&gt;[39m
+      [36m&lt;h3[39m
+        [33mclass[39m=[32m&quot;MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom css-uynfxu-MuiTypography-root&quot;[39m
+      [36m&gt;[39m
+        [0mProduct Store[0m
+      [36m&lt;/h3&gt;[39m
+      [36m&lt;div[39m
+        [33mclass[39m=[32m&quot;MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-10xq9w9-MuiToggleButtonGroup-root&quot;[39m
+        [33mrole[39m=[32m&quot;group&quot;[39m
+      [36m&gt;[39m
+        [36m&lt;button[39m
+          [33maria-pressed[39m=[32m&quot;true&quot;[39m
+          [33mclass[39m=[32m&quot;MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-gn0oko-MuiButtonBase-root-MuiToggleButton-root&quot;[39m
+          [33mtabindex[39m=[32m&quot;0&quot;[39m
+          [33mtype[39m=[32m&quot;button&quot;[39m
+          [33mvalue[39m=[32m&quot;all&quot;[39m
+        [36m&gt;[39m
+          [0mAll[0m
+        [36m&lt;/button&gt;[39m
+        [36m&lt;button[39m
+          [33maria-pressed[39m=[32m&quot;false&quot;[39m
+          [33mclass[39m=[32m&quot;MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-gn0oko-MuiButtonBase-root-MuiToggleButton-root&quot;[39m
+          [33mtabindex[39m=[32m&quot;0&quot;[39m
+          [33mtype[39m=[32m&quot;button&quot;[39m
+          [33mvalue[39m=[32m&quot;inStock&quot;[39m
+        [36m&gt;[39m
+          [0mIn Stock[0m
+        [36m&lt;/button&gt;[39m
+      [36m&lt;/div&gt;[39m
+      [36m&lt;div[39m
+        [33mclass[39m=[32m&quot;MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1qw2a80-MuiGrid-root&quot;[39m
+      [36m&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m&quot;MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root&quot;[39m
+        [36m&gt;[39m
+          [36m&lt;div[39m
+            [33mclass[39m=[32m&quot;MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root _card_5eb162 css-1j74uew-MuiPaper-root-MuiCard-root&quot;[39m
+            [33mstyle[39m=[32m&quot;--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);&quot;[39m
+          [36m&gt;[39m
+            [36m&lt;div[39m
+              [33mclass[39m=[32m&quot;MuiCardContent-root css-1lt5qva-MuiCardContent-root&quot;[39m
+            [36m&gt;[39m
+              [36m&lt;div[39m
+                [33mclass[39m=[32m&quot;MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root&quot;[39m
+              [36m&gt;[39m
+                [0mLaptop[0m
+              [36m&lt;/div&gt;[39m
+              [36m&lt;p[39m
+                [33mclass[39m=[32m&quot;MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-2qvmir-MuiTypography-root&quot;[39m
+              [36m&gt;[39m
+                [0m$[0m
+                [0m999[0m
+              [36m&lt;/p&gt;[39m
+              [36m&lt;div[39m
+                [33mclass[39m=[32m&quot;MuiStack-root css-1pagtb1-MuiStack-root&quot;[39m
+              [36m&gt;[39m
+                [36m&lt;button[39m
+                  [33mclass[39m=[32m&quot;MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root&quot;[39m
+                  [33mtabindex[39m=[32m&quot;0&quot;[39m
+                  [33mtype[39m=[32m&quot;button&quot;[39m
+                [36m&gt;[39m
+                  [0mAdd to Cart[0m
+                [36m&lt;/button&gt;[39m
+                [36m&lt;button[39m
+                  [33mclass[39m=[32m&quot;MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError css-1vvreb9-MuiButtonBase-root-MuiButton-root&quot;[39m
+                  [33mtabindex[39m=[32m&quot;0&quot;[39m
+                  [33mtype[39m=[32m&quot;button&quot;[39m
+                [36m&gt;[39m
+                  [0mRemove[0m
+                [36m&lt;/button&gt;[39m
+              [36m&lt;/div&gt;[39m
+            [36m&lt;/div&gt;[39m
+          [36m&lt;/div&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m&quot;MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root&quot;[39m
+        [36m&gt;[39m
+          [36m&lt;div[39m
+            [33mclass[39m=[32m&quot;MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root _card_5eb162 outOfStockClass css-1j74uew-MuiPaper-root-MuiCard-root&quot;[39m
+            [33mstyle[39m=[32m&quot;--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);&quot;[39m
+          [36m&gt;[39m
+            [36m&lt;div[39m
+              [33mclass[39m=[32m&quot;MuiCardContent-root css-1lt5qva-MuiCardContent-root&quot;[39m
+            [36m&gt;[39m
+              [36m&lt;div[39m
+                [33mclass[39m=[32m&quot;MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root&quot;[39m
+              [36m&gt;[39m
+                [0mPhone[0m
+              [36m&lt;/div&gt;[39m
+              [36m&lt;p[39m
+                [33mclass[39m=[32m&quot;MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-2qvmir-MuiTypography-root&quot;[39m
+              [36m&gt;[39m
+                [0m$[0m
+                [0m699[0m
+              [36m&lt;/p&gt;[39m
+              [36m&lt;div[39m
+                [33mclass[39m=[32m&quot;MuiStack-root css-1pagtb1-MuiStack-root&quot;[39m
+              [36m&gt;[39m
+                [36m&lt;p[39m
+                  [33mclass[39m=[32m&quot;MuiTypography-root MuiTypography-body1 css-hv7vrk-MuiTypography-root&quot;[39m
+                [36m&gt;[39m
+                  [0mOut of Stock[0m
+                [36m&lt;/p&gt;[39m
+                [36m&lt;button[39m
+                  [33mclass[39m=[32m&quot;MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError css-1vvreb9-MuiButtonBase-root-MuiButton-root&quot;[39m
+                  [33mtabindex[39m=[32m&quot;0&quot;[39m
+                  [33mtype[39m=[32m&quot;button&quot;[39m
+                [36m&gt;[39m
+                  [0mRemove[0m
+                [36m&lt;/button&gt;[39m
+              [36m&lt;/div&gt;[39m
+            [36m&lt;/div&gt;[39m
+          [36m&lt;/div&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m&quot;MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root&quot;[39m
+        [36m&gt;[39m
+          [36m&lt;div[39m
+            [33mclass[39m=[32m&quot;MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root _card_5eb162 css-1j74uew-MuiPaper-root-MuiCard-root&quot;[39m
+            [33mstyle[39m=[32m&quot;--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);&quot;[39m
+          [36m&gt;[39m
+            [36m&lt;div[39m
+              [33mclass[39m=[32m&quot;MuiCardContent-root css-1lt5qva-MuiCardContent-root&quot;[39m
+            [36m&gt;[39m
+              [36m&lt;div[39m
+                [33mclass[39m=[32m&quot;MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root&quot;[39m
+              [36m&gt;[39m
+                [0mMonitor[0m
+              [36m&lt;/div&gt;[39m
+              [36m&lt;p[39m
+                [33mclass[39m=[32m&quot;MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-2qvmir-MuiTypography-root&quot;[39m
+              [36m&gt;[39m
+                [0m$[0m
+                [0m250[0m
+              [36m&lt;/p&gt;[39m
+              [36m&lt;div[39m
+                [33mclass[39m=[32m&quot;MuiStack-root css-1pagtb1-MuiStack-root&quot;[39m
+              [36m&gt;[39m
+                [36m&lt;button[39m
+                  [33mclass[39m=[32m&quot;MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root&quot;[39m
+                  [33mtabindex[39m=[32m&quot;0&quot;[39m
+                  [33mtype[39m=[32m&quot;button&quot;[39m
+                [36m&gt;[39m
+                  [0mAdd to Cart[0m
+                [36m&lt;/button&gt;[39m
+                [36m&lt;button[39m
+                  [33mclass[39m=[32m&quot;MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError css-1vvreb9-MuiButtonBase-root-MuiButton-root&quot;[39m
+                  [33mtabindex[39m=[32m&quot;0&quot;[39m
+                  [33mtype[39m=[32m&quot;button&quot;[39m
+                [36m&gt;[39m
+                  [0mRemove[0m
+                [36m&lt;/button&gt;[39m
+              [36m&lt;/div&gt;[39m
+            [36m&lt;/div&gt;[39m
+          [36m&lt;/div&gt;[39m
+        [36m&lt;/div&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m" type="TestingLibraryElementError">
+TestingLibraryElementError: Unable to find an element with the text: Tablet. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div
+      class=&quot;MuiContainer-root MuiContainer-maxWidthLg css-xsov46-MuiContainer-root&quot;
+    &gt;
+      &lt;h3
+        class=&quot;MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom css-uynfxu-MuiTypography-root&quot;
+      &gt;
+        Product Store
+      &lt;/h3&gt;
+      &lt;div
+        class=&quot;MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-10xq9w9-MuiToggleButtonGroup-root&quot;
+        role=&quot;group&quot;
+      &gt;
+        &lt;button
+          aria-pressed=&quot;true&quot;
+          class=&quot;MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-gn0oko-MuiButtonBase-root-MuiToggleButton-root&quot;
+          tabindex=&quot;0&quot;
+          type=&quot;button&quot;
+          value=&quot;all&quot;
+        &gt;
+          All
+        &lt;/button&gt;
+        &lt;button
+          aria-pressed=&quot;false&quot;
+          class=&quot;MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-gn0oko-MuiButtonBase-root-MuiToggleButton-root&quot;
+          tabindex=&quot;0&quot;
+          type=&quot;button&quot;
+          value=&quot;inStock&quot;
+        &gt;
+          In Stock
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div
+        class=&quot;MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1qw2a80-MuiGrid-root&quot;
+      &gt;
+        &lt;div
+          class=&quot;MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root&quot;
+        &gt;
+          &lt;div
+            class=&quot;MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root _card_5eb162 css-1j74uew-MuiPaper-root-MuiCard-root&quot;
+            style=&quot;--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);&quot;
+          &gt;
+            &lt;div
+              class=&quot;MuiCardContent-root css-1lt5qva-MuiCardContent-root&quot;
+            &gt;
+              &lt;div
+                class=&quot;MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root&quot;
+              &gt;
+                Laptop
+              &lt;/div&gt;
+              &lt;p
+                class=&quot;MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-2qvmir-MuiTypography-root&quot;
+              &gt;
+                $
+                999
+              &lt;/p&gt;
+              &lt;div
+                class=&quot;MuiStack-root css-1pagtb1-MuiStack-root&quot;
+              &gt;
+                &lt;button
+                  class=&quot;MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root&quot;
+                  tabindex=&quot;0&quot;
+                  type=&quot;button&quot;
+                &gt;
+                  Add to Cart
+                &lt;/button&gt;
+                &lt;button
+                  class=&quot;MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError css-1vvreb9-MuiButtonBase-root-MuiButton-root&quot;
+                  tabindex=&quot;0&quot;
+                  type=&quot;button&quot;
+                &gt;
+                  Remove
+                &lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root&quot;
+        &gt;
+          &lt;div
+            class=&quot;MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root _card_5eb162 outOfStockClass css-1j74uew-MuiPaper-root-MuiCard-root&quot;
+            style=&quot;--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);&quot;
+          &gt;
+            &lt;div
+              class=&quot;MuiCardContent-root css-1lt5qva-MuiCardContent-root&quot;
+            &gt;
+              &lt;div
+                class=&quot;MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root&quot;
+              &gt;
+                Phone
+              &lt;/div&gt;
+              &lt;p
+                class=&quot;MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-2qvmir-MuiTypography-root&quot;
+              &gt;
+                $
+                699
+              &lt;/p&gt;
+              &lt;div
+                class=&quot;MuiStack-root css-1pagtb1-MuiStack-root&quot;
+              &gt;
+                &lt;p
+                  class=&quot;MuiTypography-root MuiTypography-body1 css-hv7vrk-MuiTypography-root&quot;
+                &gt;
+                  Out of Stock
+                &lt;/p&gt;
+                &lt;button
+                  class=&quot;MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError css-1vvreb9-MuiButtonBase-root-MuiButton-root&quot;
+                  tabindex=&quot;0&quot;
+                  type=&quot;button&quot;
+                &gt;
+                  Remove
+                &lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root&quot;
+        &gt;
+          &lt;div
+            class=&quot;MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root _card_5eb162 css-1j74uew-MuiPaper-root-MuiCard-root&quot;
+            style=&quot;--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);&quot;
+          &gt;
+            &lt;div
+              class=&quot;MuiCardContent-root css-1lt5qva-MuiCardContent-root&quot;
+            &gt;
+              &lt;div
+                class=&quot;MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root&quot;
+              &gt;
+                Monitor
+              &lt;/div&gt;
+              &lt;p
+                class=&quot;MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-2qvmir-MuiTypography-root&quot;
+              &gt;
+                $
+                250
+              &lt;/p&gt;
+              &lt;div
+                class=&quot;MuiStack-root css-1pagtb1-MuiStack-root&quot;
+              &gt;
+                &lt;button
+                  class=&quot;MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root&quot;
+                  tabindex=&quot;0&quot;
+                  type=&quot;button&quot;
+                &gt;
+                  Add to Cart
+                &lt;/button&gt;
+                &lt;button
+                  class=&quot;MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError MuiButton-root MuiButton-outlined MuiButton-outlinedError MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorError css-1vvreb9-MuiButtonBase-root-MuiButton-root&quot;
+                  tabindex=&quot;0&quot;
+                  type=&quot;button&quot;
+                &gt;
+                  Remove
+                &lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/__tests__/indexTest.test.jsx:21:19
+ ❯ src/__tests__/indexTest.test.jsx:20:18
+            </failure>
         </testcase>
-        <testcase classname="src/__tests__/indexTest.test.jsx" name="applies conditional styling for out-of-stock products" time="0.002746833">
+        <testcase classname="src/__tests__/indexTest.test.jsx" name="applies conditional styling for out-of-stock products" time="0.004099375">
+            <failure message="[2mexpect([22m[31melement[39m[2m).toHaveClass([22m[32m[32m&quot;outOfStockClass&quot;[32m[39m[2m)[22m
+
+Expected the element to have class:
+[32m  outOfStockClass[39m
+Received:
+[31m  MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root[39m" type="Error">
+Error: expect(element).toHaveClass(&quot;outOfStockClass&quot;)
+
+Expected the element to have class:
+  outOfStockClass
+Received:
+  MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root
+ ❯ src/__tests__/indexTest.test.jsx:28:44
+            </failure>
         </testcase>
-        <testcase classname="src/__tests__/indexTest.test.jsx" name="removes product from the dashboard when &quot;Remove&quot; button is clicked" time="0.005411916">
+        <testcase classname="src/__tests__/indexTest.test.jsx" name="removes product from the dashboard when &quot;Remove&quot; button is clicked" time="0.0090935">
         </testcase>
     </testsuite>
 </testsuites>

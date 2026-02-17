@@ -1,0 +1,11 @@
+.card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.outOfStock {
+  background-color: #f8d7da;
+  opacity: 0.6;
+  border-color: #f5c6cb;
+}

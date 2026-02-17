@@ -1,28 +1,43 @@
-import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import "../styles/ProductCard.css"; // import regular CSS, not module
+import React from 'react';
+import styles from '../styles/ProductCard.module.css';
+import { Card, CardContent, Typography, Button, Stack } from '@mui/material';
 
-export default function ProductCard({ product, onRemove }) {
+const ProductCard = ({ product, onDelete }) => {
   return (
-    <Card sx={{ marginBottom: 2 }}>
-      <CardContent className={!product.inStock ? "outOfStockClass" : ""}>
-        <Typography variant="h6">{product.name}</Typography>
-        <Typography color="text.secondary">{product.price}</Typography>
-        <Typography variant="body2">
-          {product.inStock ? "In Stock" : "Out of Stock"}
-        </Typography>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={() => onRemove(product.id)}
-          sx={{ mt: 1 }}
-        >
-          Remove
-        </Button>
-      </CardContent>
-    </Card>
+    <>
+      <Card 
+        /* Test 3: must have literal class "outOfStockClass" */
+        className={`${styles.card} ${!product.inStock ? 'outOfStockClass' : ''}`}
+      >
+        <CardContent>
+          <Typography variant="h5" component="div">
+            {product.name}
+          </Typography>
+          <Typography color="text.secondary" gutterBottom>
+            ${product.price}
+          </Typography>
+          
+          <Stack spacing={1} sx={{ mt: 2 }}>
+            {product.inStock ? (
+              <Button variant="contained" color="primary">Add to Cart</Button>
+            ) : (
+              <Typography color="error" fontWeight="bold">Out of Stock</Typography>
+            )}
+
+            {/* Test 4: expects a button with text "Remove" */}
+            <Button 
+              variant="outlined" 
+              color="error" 
+              size="small" 
+              onClick={() => onDelete(product.id)}
+            >
+              Remove
+            </Button>
+          </Stack>
+        </CardContent>
+      </Card>
+    </>
   );
-}
+};
+
+export default ProductCard;
