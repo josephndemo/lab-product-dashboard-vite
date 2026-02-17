@@ -1,13 +1,11 @@
-/// vitest.config.js
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
   test: {
-    globals: true,            // optional, allows test(), expect() without import
-    environment: 'jsdom',     // use jsdom instead of happy-dom
-    reporters: ['default', 'junit'], 
-    outputFile: './junit.xml',
+    environment: 'jsdom', // This line is crucial!
+    globals: true,
+    setupFiles: './src/setupTests.js', // If you have one
   },
 })
