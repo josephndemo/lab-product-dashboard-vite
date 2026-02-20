@@ -5,7 +5,7 @@ import { Container, Typography, ToggleButton, ToggleButtonGroup } from '@mui/mat
 const initialProducts = [
   { id: 1, name: "Laptop", price: 999, inStock: true },
   { id: 2, name: "Phone", price: 699, inStock: false },
-  { id: 3, name: "Monitor", price: 250, inStock: true },
+  { id: 3, name: "Tablet", price: 499, inStock: true }, // ✅ change this
 ];
 
 function App() {
